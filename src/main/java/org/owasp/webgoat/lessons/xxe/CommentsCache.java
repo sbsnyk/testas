@@ -105,6 +105,9 @@ public class CommentsCache {
     var xsr = xif.createXMLStreamReader(new StringReader(xml));
 
     var unmarshaller = jc.createUnmarshaller();
+
+    var ysr = xif.createXMLStreamReader(new StringReader(xml));
+
     return (Comment) unmarshaller.unmarshal(xsr);
   }
 
